@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Product Details Form</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">SARA Fashion</div>
+        
+        <div class="search-bar">
+            <input type="text" id="search" name="search" placeholder="Search">
+            <button type="button">Search</button><br><br>
+        </div>
+        
+        <div class="account-section">
+            <a href="page2.html">Cart</a>
+            <div class="dropdown">
+                <a href="page2.html">Account</a>
+                <div class="dropdown-content">
+                    <a href="#">Sign In</a><br>
+                    <a href="#">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <form action="/add-product-details" method="POST">
+        <label for="productName">Name of Product</label><br>
+        <input type="text" id="productName" name="productName" required><br><br>
+
+        <label for="previousPrice">Previous Price</label><br>
+        <input type="number" id="previousPrice" name="previousPrice" step="0.01" required><br><br>
+
+        <label for="currentPrice">Current Price</label><br>
+        <input type="number" id="currentPrice" name="currentPrice" step="0.01" required><br><br>
+
+        <label for="category">Category</label><br>
+        <input type="text" id="category" name="category" required><br><br>
+
+        <label for="brand">Brand</label><br>
+        <input type="text" id="brand" name="brand" required><br><br>
+
+        <label for="inStock">In Stock</label><br>
+        <input type="text" id="in stock" name="in stock"required><br><br>
+        
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <label for="product-picture">Choose a product picture</label>
+            <input type="file" id="product-picture" name="product-picture" accept="image/*" required><br><br>
+        
+        <button type="Add Product">Add Product</button><br><br>
+        <button type="Show Shop Items">Show Shop Items</button><br><br>
+    </form>
+
+    <footer>
+        SARA|&copy;2023 All rights reserved
+    </footer>
+
+</body>
+</html>
