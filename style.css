@@ -1,0 +1,128 @@
+
+/* General Reset */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #FFDAB9;
+    color: #333;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #6b3480;
+    color: white;
+    padding: 10px 20px;
+}
+
+.navbar .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.navbar .search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .search-bar input {
+    padding: 5px;
+    border: none;
+    border-radius: 4px;
+}
+
+.navbar .search-bar button {
+    padding: 5px 10px;
+    margin-left: 5px;
+    background-color:#6b3480;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.navbar .account-section {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .account-section a {
+    color: white;
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+.navbar .account-section .dropdown {
+    position: relative;
+}
+
+.navbar .account-section .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    color: black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.navbar .account-section .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.navbar .account-section .dropdown-content a {
+    display: block;
+    color: #333;
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+
+/* Form Styling */
+form {
+    background-color: white;
+    padding: 20px;
+    margin: 20px auto;
+    width: 50%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    padding: 10px 15px;
+    background-color:#2a2f87;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #555;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    background-color:#6b3480;
+    color: white;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
