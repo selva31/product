@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Product Details Form</title>
+    <title>Enter Product Details</title>
 </head>
 <body>
+
     <div class="navbar">
-        <div class="logo">SARA Fashion</div>
+        <div class="logo">Fashion Hub</div>
         
         <div class="search-bar">
             <input type="text" id="search" name="search" placeholder="Search">
@@ -16,9 +17,9 @@
         </div>
         
         <div class="account-section">
-            <a href="page2.html">Cart</a>
+            <a href="#">Cart</a>
             <div class="dropdown">
-                <a href="page2.html">Account</a>
+                <a href="#">Account</a>
                 <div class="dropdown-content">
                     <a href="#">Sign In</a><br>
                     <a href="#">Logout</a>
@@ -26,60 +27,59 @@
             </div>
         </div>
     </div>
+    <h2>Enter Product Details</h2>
     
-    <form action="/add-product-details" method="POST">
-        <label for="productName">Name of Product</label><br>
-        <input type="text" id="product Name" name="product Name" required><br>
+    <form id="productForm">
+        <label for="productName">Product Name:</label>
+        <input type="text" id="productName" name="productName" required><br>
 
-        <label for="size">product size</label><br>
-        <input type="number" id="size" name="size" required><br>
+        <label for="size">Size:</label>
+        <input type="text" id="size" name="size" required><br>
 
-        <label for="previousPrice">Previous Price</label><br>
-        <input type="number" id="previousPrice" name="previousPrice" step="0.01" required><br><br>
+        <label for="previousPrice">Previous Price:</label>
+        <input type="number" id="previousPrice" name="previousPrice"  required><br>
 
-        <label for="currentPrice">Current Price</label><br>
-        <input type="number" id="currentPrice" name="currentPrice" step="0.01" required><br><br>
+        <label for="currentPrice">Current Price:</label>
+        <input type="number" id="currentPrice" name="currentPrice"  required><br>
 
-        <label for="category"> Product Category</label><br>
-        <input type="text" id="category" name="Product category" required><br>
+        <label for="category">Category:</label>
+        <input type="text" id="category" name="category" required><br>
 
-        <label for="colour">colour </label><br>
+        <label for="colour">Colour:</label>
         <input type="text" id="colour" name="colour" required><br>
 
-        <label for="brand">Brand</label><br>
+        <label for="brand">Brand:</label>
         <input type="text" id="brand" name="brand" required><br>
 
-        <label for="inStock">In Stock</label><br>
-        <input type="text" id="in stock" name="in stock"required><br>
+        <label for="inStock">In Stock:</label>
+        <input type="text" id="inStock" name="inStock" required><br>
 
-        <label for="quantity">Product Quantity</label><br>
-        <input type="text" id="quantity" name="quantity" required><br>
-         
-        <label for="department">Product Department</label><br>
-        <input type="text" id="text" name="text" required><br>
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" required><br>
 
-        <label for="rating">Rating</label><br>
-        <input type="number" id="rating" name="rating"required><br>
+        <label for="department">Department:</label>
+        <input type="text" id="department" name="department" required><br>
 
-        <label for="description">Product Description</label><br>
-        <input type="text" id="description" name="description"required><br>
+        <label for="rating">Rating:</label>
+        <input type="number" id="rating" name="rating" step="0.1" required><br>
 
-        <label for="manufacturer">Product manufacturer</label><br>
-        <input type="text" id="text" name="text" required><br>
+        <label for="description">Description:</label>
+        <input type="text" id="description" name="description" required><br>
 
-        <label for="origin">country of origin</label><br>
+        <label for="manufacturer">Manufacturer:</label>
+        <input type="text" id="manufacturer" name="manufacturer" required><br>
+
+        <label for="origin">Country of Origin:</label>
         <input type="text" id="origin" name="origin" required><br>
-        
-        <form action="/upload" method="post" enctype="multipart/form-data">
-            <label for="product-picture">Choose a product picture</label>
-            <input type="file" id="product-picture" name="product-picture" accept="image/*" required><br>
-        
-        <button type="Add Product">Add Product</button><br><br>
-        <button type="Show Shop Items">Show shop items</button>
+
+        <label for="image">Product Image:</label>
+        <input type="file" id="image" name="image" accept="image/*" required><br>
+        <button type="button" onclick="submitForm()">Submit</button>
+        <button onclick="window.location.href='view.html'">View Products</button>
     </form>
 
     <footer>
-        SARA|&copy;2023 All rights reserved
+        Fashion Hub|&copy;2023 All rights reserved
     </footer>
 
 </body>
