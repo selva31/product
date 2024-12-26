@@ -34,20 +34,23 @@
         <div class="order">
             <label for="order id">order id:</label>
             <input type="number" id="order id" placeholder="Enter proudct id" required><br>
+            <div class="form-group">
                 <label for="product Name">Product Name:</label>
                 <input type="text" id="product Name" placeholder="Enter product name" required><br>
                 <label for="product price">Product Price</label>
                 <input type="number" id="product prize" placeholder="Enter Product price" required><br>
                 <label for="quantity">Quantity</label>
                 <input type="text" id="quanity"  placeholder="Enter Product Quanity" required><br>
-        
+            </div> 
             <div>
-                <label for="status">Change Status:</label>
-                <select id="status">
+                <label for="status">Order Status:</label>
+                <select id="status" name="status" required>
                     <option value="">Select Status</option>
                     <option value="Picked Up">Picked Up</option>
                     <option value="In Transit">In Transit</option>
                     <option value="Delivered">Delivered</option>
+                    <option value="Pending">Pending</option>
+                    <option value="Cancelled">Cancelled</option>
                 </select>
             </div>
             <button onclick="updateProduct()">Update</button>
