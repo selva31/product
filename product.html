@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Enter Product Details</title>
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="logo">Fashion Hub</div>
+        
+        <div class="search-bar">
+            <input type="text" id="search" name="search" placeholder="Search">
+            <button type="button">Search</button><br><br>
+        </div>
+        
+        <div class="account-section">
+            <a href="#">Cart</a>
+            <div class="dropdown">
+                <a href="#">Account</a>
+                <div class="dropdown-content">
+                    <a href="#">Sign In</a><br>
+                    <a href="#">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        Fashion Hub|&copy;2023 All rights reserved
+    </footer>
+    <div class="container">
+        <div class="order">
+            <label for="order id">order id:</label>
+            <input type="number" id="order id" placeholder="Enter proudct id">
+            <div class="form-group">
+                <label for="product-details">Product Details:</label>
+                <input type="text" id="product-details" placeholder="Enter product details">
+            </div>
+            <div>
+                <label for="status">Change Status:</label>
+                <select id="status">
+                    <option value="">Select Status</option>
+                    <option value="Picked Up">Picked Up</option>
+                    <option value="In Transit">In Transit</option>
+                    <option value="Delivered">Delivered</option>
+                </select>
+            </div>
+            <button onclick="updateProduct()">Update</button>
+        </div>
+    </div>
+</body>
+</html>

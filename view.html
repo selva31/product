@@ -5,12 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>View Product Details</title>
-    
 </head>
 <body>
 
     <div class="navbar">
-        <div class="logo">SARA</div>
+        <div class="logo">Fashion Hub</div>
         
         <div class="search-bar">
             <input type="text" id="search" name="search" placeholder="Search">
@@ -28,15 +27,72 @@
             </div>
         </div>
     </div>
-    <h2>Product Details</h2>
-    <button onclick="window.location.href='index.html'">Add New Product</button><br>
-    <button id="update">update</button>
-    <button id="delete">delete</button>
 
-    
+    <h2>Product Details</h2>
+    <button onclick="window.location.href='index.html'">Add New Product</button>
+
+    <!-- Product Table -->
+    <table border="1" cellspacing="0" cellpadding="10" style="width: 100%; margin-top: 20px;">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Description</th>
+                <th>Product Category</th>
+                <th>Image URL</th>
+                <th>Size</th>
+                <th>Color</th>
+                <th>Quantity</th>
+                <th>Manufacturer</th>
+                <th>Country of Origin</th>
+                <th>Rating</th>
+                <th>Discount</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Example row, dynamically generated -->
+            <tr>
+                <td>Blue Denim Jacket</td>
+                <td>$49.99</td>
+                <td>Stylish and comfortable denim jacket.</td>
+                <td>Clothing</td>
+                <td><a href="images/denim-jacket.jpg" target="_blank">View Image</a></td>
+                <td>M</td>
+                <td>Blue</td>
+                <td>20</td>
+                <td>Fashion Co.</td>
+                <td>India</td>
+                <td>4.5</td>
+                <td>10%</td>
+                <td>
+                    <button onclick="updateProduct(this)">Update</button>
+                    <button onclick="deleteProduct(this)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
     <footer>
-        Fashion Hub|&copy;2023 All rights reserved
+        Fashion Hub | &copy;2023 All rights reserved
     </footer>
 
+    <script>
+       
+        function updateProduct(button) {
+            const row = button.closest('tr'); 
+            const productName = row.cells[0].textContent; 
+            alert(`Update product: ${productName}`);
+           
+        }
+
+        function deleteProduct(button) {
+            const row = button.closest('tr'); 
+            const productName = row.cells[0].textContent; 
+            if (confirm(`Are you sure you want to delete ${productName}?`)) {
+                row.remove();
+            }
+        }
+    </script>
 </body>
 </html>
