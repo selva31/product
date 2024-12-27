@@ -32,6 +32,8 @@
                 <th>Name</th>
                 <th>Price</th>
                 <th>Place</th>
+                <th>Payment</th>
+                <th>Qunaity</th>
                 <th>Status</th>
             </tr>
         </thead>
@@ -40,10 +42,6 @@
         </tbody>
     </table>
     <button class="add row" onclick="addRow()">Add Row</button>
-
-    <footer>
-        Fashion Hub | &copy;2023 All rights reserved
-    </footer>
 
     <script>
         function addRow() {
@@ -55,11 +53,14 @@
                 <td><input type="text" placeholder="Enter Name"></td>
                 <td><input type="number" placeholder="Enter Price"></td>
                 <td><input type="text" placeholder="Enter Place"></td>
-                <td>
+                <td><input type="text" placeholder= "Enter payment status"><td>
+                <td><input type="number" placeholder="Enter Quantity"<td>
                     <select>
                         <option>select</option>
-                        <option value="not started">Not Started</option>
+                        <option value="not process">Not Process</option>
+                        <option value=processed">Processed</option>
                         <option value="in transit">In-Transit</option>
+                        <option value="shipped">Shipped</option>
                         <option value="delivered">Delivered</option>
                         <option value="failed">Failed</option>
                     </select>
@@ -69,5 +70,10 @@
             tableBody.appendChild(newRow);
         }
     </script>
+
+<footer>
+    Fashion Hub | &copy;2023 All rights reserved
+</footer>
+
 </body>
 </html>
