@@ -44,12 +44,13 @@
                     <select class="payment-select">
                         <option value="Cash on Delivery" selected>Cash on Delivery</option>
                     </select><br>
-                </div>
+                <Strong>status:</Strong>
                 <select class="status-select" onchange="updateStatus(12345, this.value)">
                     <option value="Pending">Pending</option>
                     <option value="In Transit">In Transit</option>
                     <option value="Delivered">Delivered</option>
                 </select>
+                </div>
             </div>
             <div class="order">
                 <img src="https://via.placeholder.com/150" alt="Product Image">
@@ -63,12 +64,13 @@
                     <select class="payment-select">
                         <option value="Cash on Delivery" selected>Cash on Delivery</option>
                     </select><br>
+                    <Strong>status</Strong>
+                    <select class="status-select" onchange="updateStatus(12346, this.value)">
+                        <option value="Pending">Pending</option>
+                        <option value="In Transit">In Transit</option>
+                        <option value="Delivered">Delivered</option>
+                    </select>
                 </div>
-                <select class="status-select" onchange="updateStatus(12346, this.value)">
-                    <option value="Pending">Pending</option>
-                    <option value="In Transit">In Transit</option>
-                    <option value="Delivered">Delivered</option>
-                </select>
             </div>
         </div>
         <button class="logout-btn" onclick="logout()">Logout</button>
