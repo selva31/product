@@ -40,7 +40,10 @@
                     <strong>Price:</strong> $50.00<br>
                     <strong>Place:</strong> New York, NY<br>
                     <strong>Quantity:</strong> 2<br>
-                    <strong>Payment:</strong> Paid<br>
+                    <strong>Payment:</strong>
+                    <select class="payment-select">
+                        <option value="Cash on Delivery" selected>Cash on Delivery</option>
+                    </select><br>
                 </div>
                 <select class="status-select" onchange="updateStatus(12345, this.value)">
                     <option value="Pending">Pending</option>
@@ -56,7 +59,10 @@
                     <strong>Price:</strong> $75.00<br>
                     <strong>Place:</strong> Los Angeles, CA<br>
                     <strong>Quantity:</strong> 1<br>
-                    <strong>Payment:</strong> Pending<br>
+                    <strong>Payment:</strong>
+                    <select class="payment-select">
+                        <option value="Cash on Delivery" selected>Cash on Delivery</option>
+                    </select><br>
                 </div>
                 <select class="status-select" onchange="updateStatus(12346, this.value)">
                     <option value="Pending">Pending</option>
